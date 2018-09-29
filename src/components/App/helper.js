@@ -4,6 +4,8 @@ export default class DistrictRepository {
   
   constructor(data) {
     this.stats = this.removeDuplicates(kinderData)
+    const name = this.findByName('ACADEMY 20')
+    console.log(name)
   }
 
   removeDuplicates = (kinderData) => {
@@ -17,5 +19,16 @@ export default class DistrictRepository {
       kinderObj[schoolDistrict].stats[year] = roundedData
       return kinderObj
     }, {})
+  
+  }
+
+  findByName = (schoolDistrict) => {
+    let capitalDistrict = schoolDistrict.toUpperCase();
+    
+    if(!this.stats[capitalDistrict]) {
+      return undefined
+    } else if (this.stats[capitalDistrict]) {
+      return this.stats[capitalDistrict].location
+    }
   }
 }

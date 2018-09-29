@@ -12,7 +12,7 @@ class App extends Component {
   }
   
   componentDidMount() {
-    console.log(this.state.district)
+    // console.log(this.state.district)
   }
 
   render() {
