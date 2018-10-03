@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card } from '../Card';
+import PropTypes from 'prop-types'
 
 export const CardContainer = ({ filteredDistricts }) => {
   const districtValues = Object.values(filteredDistricts)
@@ -15,4 +16,8 @@ export const CardContainer = ({ filteredDistricts }) => {
       {displayDistrictCards}
     </div>
   )
+}
+
+CardContainer.propTypes = {
+  filteredDistricts: PropTypes.array.isRequired
 }
