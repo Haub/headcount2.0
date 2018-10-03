@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Search.css';
 
 class Search extends Component {
   constructor() {
@@ -24,8 +25,9 @@ class Search extends Component {
         <input
           placeholder="Enter a district"
           onChange={this.handleChange}
+          className='search'
         />
-        <button>Enter</button>
+        <button className='enter-button'>Enter</button>
       </form>
     )
   }
