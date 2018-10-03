@@ -17,11 +17,9 @@ export default class DistrictRepository {
           location: schoolDistrict, 
           stats: {}
         }
-      } 
-      
+      }      
       kinderObj[schoolDistrict].stats[year] = roundedData || 0;
-      return kinderObj
-    
+      return kinderObj 
     }, {})  
   }
 
@@ -30,11 +28,10 @@ export default class DistrictRepository {
     return this.stats[upperSchoolDistrict] 
   }
 
-
-
   findAllMatches = (schoolDistrict = '') => {
     const districts = Object.keys(this.stats);
-    const matchingDistricts = districts.filter(district => district.toUpperCase().includes(schoolDistrict.toUpperCase()));
-    return matchingDistricts
+    const matchingDistricts = districts.filter(district => district.toUpperCase().includes(schoolDistrict.toUpperCase())) 
+    const matchingDistrictStats = matchingDistricts.map(location => this.stats[location])
+    return matchingDistrictStats
   }
 }
