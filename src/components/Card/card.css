@@ -1,0 +1,28 @@
+/*dark slate gray - #2F4858
+teal blue - #33658A 
+turqoise - #55DDE0
+saffron - #F6AE2D
+orange - #F26419*/
+
+* {
+  margin: 0 auto;
+  width: 100%;
+  background-color: #33658A;
+  text-align: center;
+}
+
+.district-cards {
+  display: inline-block;
+  width: 16rem;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.location {
+  font-size: 1.3rem;
+}
+

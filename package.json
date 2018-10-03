@@ -3,9 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "enzyme": "^3.6.0",
+    "enzyme-adapter-react-16": "^1.5.0",
+    "eslint": "^5.6.1",
+    "mocha": "^5.2.0",
     "react-scripts": "1.1.0"
   },
   "dependencies": {
+    "prop-types": "^15.6.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
   },
@@ -13,6 +18,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "eslint": "./node_modules/eslint/bin/eslint.js ./src/**/**/*.js"
   }
 }
