@@ -15,7 +15,7 @@ export default class DistrictRepository {
       if (!kinderObj[schoolDistrict]) {
         kinderObj[schoolDistrict] = {
           location: schoolDistrict, 
-          stats: {}
+          stats: {},
         };
       }      
       kinderObj[schoolDistrict].stats[year] = roundedData || 0;
