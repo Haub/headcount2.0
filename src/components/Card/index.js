@@ -3,11 +3,13 @@ import './card.css';
 import PropTypes from 'prop-types'; 
 
 export const Card = ({location, stats}) => {
-  
-  const displayStats = Object.entries(stats).map((stat, index) => 
-    // const statColor = {stat[1] >= 0.5 ? 'above': 'below'}
-    <li key={index} className='individualStats'>{stat[0]}: {stat[1]}</li>
-  );
+  const displayStats = Object.entries(stats).map((stat, index) => {
+    const statColor = stat[1] < 0.5 ? 'below': 'above';
+    return (
+      <li key={index} className={statColor}>{stat[0]}: {stat[1]}</li>
+    )
+    
+  });
   
   return (
     <div className='district-cards'>
@@ -18,6 +20,7 @@ export const Card = ({location, stats}) => {
 };
 
 Card.propTypes = {
-  location: PropTypes.string.isRequired,
-  stats: PropTypes.object.isRequired 
+
+  location: PropTypes.string,
+  stats: PropTypes.object 
 };
