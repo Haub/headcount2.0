@@ -2,7 +2,7 @@ import React from 'react';
 import './card.css';
 import PropTypes from 'prop-types'; 
 
-export const Card = ({location, stats}) => {
+export const Card = ({location, stats, selectDistrict}) => {
  
    const displayStats = Object.keys(stats).map((stat, index) => {
     return (
@@ -12,7 +12,7 @@ export const Card = ({location, stats}) => {
   });
   
   return (
-    <div className='district-cards'>
+    <div className='district-cards' onClick={()=>selectDistrict(location)}>
       <h2 className='location'>{location}</h2>
       <ul className='stats'>{displayStats}</ul>
     </div>
