@@ -4,8 +4,6 @@ export default class DistrictRepository {
   
   constructor() {
     this.stats = this.removeDuplicates(kinderData);
-    const average = this.findAverage('ACADEMY 20')
-    console.log(average)
   }
 
   removeDuplicates = (kinderData) => {
@@ -42,8 +40,8 @@ export default class DistrictRepository {
   findAverage = (schoolDistrict) => {
     const statValues = Object.values(this.stats[schoolDistrict].stats);
     const average = statValues.reduce((sum, stat) => {
-      return sum += stat
-    }, 0)/statValues.length
+      return sum += stat;
+    }, 0)/statValues.length;
     return Math.round(average * 1000)/1000;
   }
 

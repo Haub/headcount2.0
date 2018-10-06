@@ -15,7 +15,8 @@ class App extends Component {
   }
   
   componentDidMount = () => {
-    this.setState({filteredDistricts: this.state.district.stats});
+    // this.setState({ filteredDistricts: this.state.district.stats });
+    this.filterDistricts(this.state.district.state);
   }
 
   filterDistricts = (districtInput) => {
