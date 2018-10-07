@@ -33,3 +33,9 @@ export const ComparisonContainer = ({comparisonObject, selectedDistricts, unsele
     </div>
   )
 }
+
+ComparisonContainer.propTypes = {
+  comparisonObject: PropTypes.object,
+  selectedDistricts: PropTypes.array, 
+  unselectDistrict: PropTypes.func
+}
