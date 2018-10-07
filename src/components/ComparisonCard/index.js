@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 
 export const ComparisonCard = ({location, stats, unselectDistrict}) => {
  
-   const displayStats = Object.keys(stats).map((stat, index) => {
+  const displayStats = Object.keys(stats).map((stat, index) => {
     return (
       <li key={index} className={stats[stat] < 0.5 ? 'below': 'above'}>{stat}: {stats[stat]}</li>
-    )
+    );
     
   });
   
@@ -20,5 +20,6 @@ export const ComparisonCard = ({location, stats, unselectDistrict}) => {
 
 ComparisonCard.propTypes = {
   location: PropTypes.string,
-  stats: PropTypes.object 
+  stats: PropTypes.object,
+  unselectDistrict: PropTypes.func 
 };

@@ -1,5 +1,6 @@
 import React from 'react';
-import {ComparisonCard} from '../ComparisonCard';
+import { ComparisonCard } from '../ComparisonCard';
+import PropTypes from 'prop-types';
 
 export const ComparisonContainer = ({comparisonObject, selectedDistricts, unselectDistrict}) => {
   
@@ -15,9 +16,9 @@ export const ComparisonContainer = ({comparisonObject, selectedDistricts, unsele
       key={district.location}
       unselectDistrict={unselectDistrict}
     />
-  )
+  );
 
-  return(
+  return (
     <div>
       {displaySelectedCards[0]}
       { displaySelectedCards.length > 1 &&
@@ -31,11 +32,11 @@ export const ComparisonContainer = ({comparisonObject, selectedDistricts, unsele
       }
       {displaySelectedCards[1]}
     </div>
-  )
-}
+  );
+};
 
 ComparisonContainer.propTypes = {
   comparisonObject: PropTypes.object,
   selectedDistricts: PropTypes.array, 
   unselectDistrict: PropTypes.func
-}
+};

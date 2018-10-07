@@ -28,27 +28,27 @@ class App extends Component {
 
   selectDistrict = (location) => {
     const newDistrict = this.state.district.findByName(location);
-    if(this.state.selectedDistricts.length < 2 && !this.state.selectedDistricts.includes(newDistrict)) {
+    if (this.state.selectedDistricts.length < 2 && !this.state.selectedDistricts.includes(newDistrict)) {
       const selectedDistricts = [...this.state.selectedDistricts, newDistrict];
-      this.setState({selectedDistricts}, () => this.compareDistricts(this.state.selectedDistricts))
+      this.setState({selectedDistricts}, () => this.compareDistricts(this.state.selectedDistricts));
     }
 
     if (this.state.selectedDistricts.includes(newDistrict)) {
-      this.unselectDistrict(newDistrict.location)
+      this.unselectDistrict(newDistrict.location);
     }
   }
 
   unselectDistrict = (district) => {
-    const filterSelected = this.state.selectedDistricts.filter(card => card.location !== district)
-    this.setState({selectedDistricts: filterSelected})
+    const filterSelected = this.state.selectedDistricts.filter(card => card.location !== district);
+    this.setState({selectedDistricts: filterSelected});
   }
   
   compareDistricts = (comparedCards) => {
-    if(this.state.selectedDistricts.length === 2) {
+    if (this.state.selectedDistricts.length === 2) {
       const districtOne = comparedCards[0].location;
       const districtTwo = comparedCards[1].location;
-      const comparedData = this.state.district.compareDistrictAverages(districtOne, districtTwo)
-      this.setState({comparisonObject: comparedData})
+      const comparedData = this.state.district.compareDistrictAverages(districtOne, districtTwo);
+      this.setState({comparisonObject: comparedData});
     }
   }
 
