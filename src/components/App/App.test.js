@@ -1,10 +1,11 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import App from './index';
 
 describe('App', () => {
+  
   let wrapper;
-  beforeEach(() => {
+  beforeEach( () => {
     wrapper = shallow(<App />);
   });
 

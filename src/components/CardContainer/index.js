@@ -20,5 +20,6 @@ export const CardContainer = ({ filteredDistricts, selectDistrict }) => {
 };
 
 CardContainer.propTypes = {
-  filteredDistricts: PropTypes.array.isRequired
+  filteredDistricts: PropTypes.array.isRequired,
+  selectDistrict: PropTypes.func
 };

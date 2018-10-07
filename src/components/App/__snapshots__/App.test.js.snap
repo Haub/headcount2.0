@@ -29,7 +29,9 @@ ShallowWrapper {
           />
 </header>,
         <Unknown
-          comparisonObject={undefined}
+          comparisonObject={Object {}}
+          selectedDistricts={Array []}
+          unselectDistrict={[Function]}
 />,
         <Unknown
           filteredDistricts={Array []}
@@ -88,7 +90,9 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "comparisonObject": undefined,
+          "comparisonObject": Object {},
+          "selectedDistricts": Array [],
+          "unselectDistrict": [Function],
         },
         "ref": null,
         "rendered": null,
@@ -127,7 +131,9 @@ ShallowWrapper {
             />
 </header>,
           <Unknown
-            comparisonObject={undefined}
+            comparisonObject={Object {}}
+            selectedDistricts={Array []}
+            unselectDistrict={[Function]}
 />,
           <Unknown
             filteredDistricts={Array []}
@@ -186,7 +192,9 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "comparisonObject": undefined,
+            "comparisonObject": Object {},
+            "selectedDistricts": Array [],
+            "unselectDistrict": [Function],
           },
           "ref": null,
           "rendered": null,
