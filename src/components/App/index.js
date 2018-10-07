@@ -30,9 +30,17 @@ class App extends Component {
     const newDistrict = this.state.district.findByName(location);
     if(this.state.selectedDistricts < 3 && !this.state.selectedDistricts.includes(newDistrict)) {
       const selectedDistricts = [...this.state.selectedDistricts, newDistrict];
-      this.setState({selectedDistricts}, () => this.compareDistricts(this.state.selectedDistricts))
+      this.setState({selectedDistricts})
     }
 
+    if (this.state.selectedDistricts.includes(newDistrict)) {
+      this.unselectLocation(newDistrict.location)
+    }
+  }
+
+  unselectLocation = (district) => {
+    const filterSelected = this.state.selectedDistricts.filter(card => card.location !== district)
+    this.setState({selectedDistricts: filterSelected})
   }
 
   render() {
