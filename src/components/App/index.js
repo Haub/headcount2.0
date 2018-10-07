@@ -60,7 +60,13 @@ class App extends Component {
           <Search filterDistricts={this.filterDistricts} />
         </header>
         
-        <ComparisonContainer comparisonObject={this.comparisonObject} /> 
+        {this.state.selectedDistricts &&
+          <ComparisonContainer 
+            comparisonObject={this.state.comparisonObject} 
+            selectedDistricts={this.state.selectedDistricts}
+            unselectDistrict={this.unselectDistrict}
+          />
+        } 
 
         <CardContainer 
           filteredDistricts={this.state.filteredDistricts} 
