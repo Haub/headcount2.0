@@ -2,17 +2,17 @@ import React from 'react';
 import './card.css';
 import PropTypes from 'prop-types'; 
 
-export const Card = ({location, stats}) => {
-  const displayStats = Object.entries(stats).map((stat, index) => {
-    const statColor = stat[1] < 0.5 ? 'below': 'above';
+export const Card = ({location, stats, selectDistrict}) => {
+ 
+   const displayStats = Object.keys(stats).map((stat, index) => {
     return (
-      <li key={index} className={statColor}>{stat[0]}: {stat[1]}</li>
+      <li key={index} className={stats[stat] < 0.5 ? 'below': 'above'}>{stat}: {stats[stat]}</li>
     )
     
   });
   
   return (
-    <div className='district-cards'>
+    <div className='district-cards' onClick={()=>selectDistrict(location)}>
       <h2 className='location'>{location}</h2>
       <ul className='stats'>{displayStats}</ul>
     </div>

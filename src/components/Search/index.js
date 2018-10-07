@@ -1,37 +1,29 @@
 import React, { Component } from 'react';
 import './Search.css';
+import PropTypes from 'prop-types';
 
 class Search extends Component {
-  constructor() {
-    super()
-    this.state = {
-      districtInput: ''
-    }
-  }
 
-  handleChange = (e) => {
-    const { value } = e.target;
-    this.setState({ districtInput: e.target }) 
-  }
-
-  handleSubmit = (e) => {
-    e.preventDefault();
-    this.props.filterDistricts(this.state.districtInput)
+  handleChange = (event) => {
+    this.props.filterDistricts(event.target.value);
   }
 
   render() {
-    return(
-      <form onSubmit={this.handleSubmit}>
+    return (
+      <form>
         <input
-          placeholder="Enter a district"
+          placeholder="Enter District Name"
           onChange={this.handleChange}
           className='search'
         />
         <button className='enter-button'>Enter</button>
       </form>
-    )
+    );
   }
-  
 }
+
+Search.propTypes = { 
+  filterDistricts: PropTypes.func.isRequired
+};
 
 export default Search;
