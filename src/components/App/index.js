@@ -36,6 +36,11 @@ class App extends Component {
     if (this.state.selectedDistricts.includes(newDistrict)) {
       this.unselectDistrict(newDistrict.location);
     }
+
+    if (this.state.selectedDistricts.length > 1) {
+      const selectedDistricts = [];
+      this.setState({selectedDistricts})
+    }
   }
 
   unselectDistrict = (district) => {
