@@ -20,7 +20,6 @@ export const Card = ({location, stats, selectDistrict}) => {
 };
 
 Card.propTypes = {
-
   location: PropTypes.string,
   stats: PropTypes.object 
 };
