@@ -1,8 +1,7 @@
 import React from 'react';
-import './card.css';
 import PropTypes from 'prop-types'; 
 
-export const Card = ({location, stats, selectDistrict}) => {
+export const ComparisonCard = ({location, stats, unselectDistrict}) => {
  
    const displayStats = Object.keys(stats).map((stat, index) => {
     return (
@@ -12,14 +11,14 @@ export const Card = ({location, stats, selectDistrict}) => {
   });
   
   return (
-    <div className='district-cards' onClick={()=>selectDistrict(location)}>
+    <div className='district-cards' onClick={()=>unselectDistrict(location)}>
       <h2 className='location'>{location}</h2>
       <ul className='stats'>{displayStats}</ul>
     </div>
   );
 };
 
-Card.propTypes = {
+ComparisonCard.propTypes = {
   location: PropTypes.string,
   stats: PropTypes.object 
 };
