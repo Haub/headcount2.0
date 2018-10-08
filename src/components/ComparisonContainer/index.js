@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComparisonCard } from '../ComparisonCard';
 import PropTypes from 'prop-types';
-import './comparisonContainer.css'
+import './comparisonContainer.css';
 
 export const ComparisonContainer = ({comparisonObject, selectedDistricts, unselectDistrict}) => {
   

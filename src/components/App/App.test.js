@@ -25,46 +25,14 @@ describe('App', () => {
 
   it('should update selectedDistricts in state when selectDistrict is invoked', () => {
     const mockData = 'COLORADO';
-    const expectedState = [
-      {"location": "COLORADO", 
-         "stats": {
-          "2004": 0.24, 
-          "2005": 0.278, 
-          "2006": 0.337, 
-          "2007": 0.395, 
-          "2008": 0.536, 
-          "2009": 0.598, 
-          "2010": 0.64, 
-          "2011": 0.672, 
-          "2012": 0.695, 
-          "2013": 0.703, 
-          "2014": 0.741
-        } 
-      }]
     wrapper.instance().selectDistrict(mockData);
     expect(wrapper.state('selectedDistricts').length).toEqual(1);
-  })
+  });
 
   it('should unselect a district when unselectDistrict is called', () => {
     const mockData = 'COLORADO';
-    const mockState = [
-      {"location": "COLORADO", 
-         "stats": {
-          "2004": 0.24, 
-          "2005": 0.278, 
-          "2006": 0.337, 
-          "2007": 0.395, 
-          "2008": 0.536, 
-          "2009": 0.598, 
-          "2010": 0.64, 
-          "2011": 0.672, 
-          "2012": 0.695, 
-          "2013": 0.703, 
-          "2014": 0.741
-        } 
-      }]
-      wrapper.instance().unselectDistrict('COLORADO');
-      expect(wrapper.state().selectedDistricts.length).toEqual(0);
-  })
+    wrapper.instance().unselectDistrict(mockData);
+    expect(wrapper.state().selectedDistricts.length).toEqual(0);
+  });
   
 });

@@ -9,9 +9,10 @@ export const Card = ({location, stats, selectDistrict}) => {
       <li key={index} className={stats[stat] < 0.5 ? 'below': 'above'}>{stat}: {stats[stat]}</li>
     );   
   });
+    // <div className={`${isSelected ? 'selected' :  'district-cards'}`} onClick={()=>selectDistrict(location)}>
   
   return (
-    <div className='district-cards' onClick={()=>selectDistrict(location)}>
+    <div className={'district-cards'} onClick={()=>selectDistrict(location)}>
       <h2 className='location'>{location}</h2>
       <ul className='stats'>{displayStats}</ul>
     </div>
