@@ -12,6 +12,6 @@ This application was built using the `create-react-app` boilerplate.
 * Use propTypes to validate props passed to each component.
 * Write meaningful, comprehensive unit and integration tests.
 
-<img src = 'src/screen1.png'>
-<img src = 'src/screen2.png'>
+<img src = './screen1.png'>
+<img src = './screen2.png'>
 
