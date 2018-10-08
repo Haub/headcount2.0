@@ -30,6 +30,7 @@ class App extends Component {
     const newDistrict = this.state.district.findByName(location);
     if (this.state.selectedDistricts.length < 2 && !this.state.selectedDistricts.includes(newDistrict)) {
       const selectedDistricts = [...this.state.selectedDistricts, newDistrict];
+      newDistrict.isSelected = !newDistrict.isSelected;
       this.setState({selectedDistricts}, () => this.compareDistricts(this.state.selectedDistricts));
     }
 
@@ -39,9 +40,8 @@ class App extends Component {
 
     if (this.state.selectedDistricts.length > 1) {
       const selectedDistricts = [];
-      this.setState({selectedDistricts})
+      this.setState({selectedDistricts});
     }
-    newDistrict.selected = !newDistrict.selected
   }
 
   unselectDistrict = (district) => {
@@ -77,6 +77,7 @@ class App extends Component {
         <CardContainer 
           filteredDistricts={this.state.filteredDistricts} 
           selectDistrict={this.selectDistrict}
+          selected={false}
         />
       </div>
     );
