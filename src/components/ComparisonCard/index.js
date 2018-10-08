@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types'; 
+import './comparisonCard.css';
 
 export const ComparisonCard = ({location, stats, unselectDistrict}) => {
  
@@ -11,7 +12,7 @@ export const ComparisonCard = ({location, stats, unselectDistrict}) => {
   });
   
   return (
-    <div className='district-cards' onClick={()=>unselectDistrict(location)}>
+    <div className='comparison-cards' onClick={()=>unselectDistrict(location)}>
       <h2 className='location'>{location}</h2>
       <ul className='stats'>{displayStats}</ul>
     </div>

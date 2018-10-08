@@ -7,8 +7,7 @@ export const Card = ({location, stats, selectDistrict}) => {
   const displayStats = Object.keys(stats).map((stat, index) => {
     return (
       <li key={index} className={stats[stat] < 0.5 ? 'below': 'above'}>{stat}: {stats[stat]}</li>
-    );
-    
+    );   
   });
   
   return (

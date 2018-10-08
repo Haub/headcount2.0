@@ -1,6 +1,7 @@
 import React from 'react';
 import { ComparisonCard } from '../ComparisonCard';
 import PropTypes from 'prop-types';
+import './comparisonContainer.css'
 
 export const ComparisonContainer = ({comparisonObject, selectedDistricts, unselectDistrict}) => {
   
@@ -19,15 +20,16 @@ export const ComparisonContainer = ({comparisonObject, selectedDistricts, unsele
   );
 
   return (
-    <div>
+    <div className='comparison-layout'>
       {displaySelectedCards[0]}
+      
       { displaySelectedCards.length > 1 &&
-        <div>
-          <h3>{locationOne}</h3>
-          <h3>{locationOneAverage}</h3>
-          <h2>{comparedAverage}</h2>
-          <h3>{locationTwo}</h3>
-          <h3>{locationTwoAverage}</h3>
+        <div className='comparison-cards comparison-card'>
+          <h3 className='comparison-location'>{locationOne}</h3>
+          <h3 className='location-average'>{locationOneAverage}</h3>
+          <h2 className='comparison-average'>{comparedAverage}</h2>
+          <h3 className='comparison-location'>{locationTwo}</h3>
+          <h3 className='location-average'>{locationTwoAverage}</h3>
         </div>
       }
       {displaySelectedCards[1]}

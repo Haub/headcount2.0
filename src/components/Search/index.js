@@ -12,7 +12,7 @@ class Search extends Component {
     return (
       <form>
         <input
-          placeholder="Enter District Name"
+          placeholder="District name"
           onChange={this.handleChange}
           className='search'
         />
@@ -23,7 +23,7 @@ class Search extends Component {
 }
 
 Search.propTypes = { 
-  filterDistricts: PropTypes.func.isRequired
+  filterDistricts: PropTypes.func
 };
 
 export default Search;
