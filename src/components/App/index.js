@@ -41,6 +41,7 @@ class App extends Component {
       const selectedDistricts = [];
       this.setState({selectedDistricts})
     }
+    newDistrict.selected = !newDistrict.selected
   }
 
   unselectDistrict = (district) => {

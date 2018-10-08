@@ -1,0 +1,48 @@
+* {
+  margin: 0 auto;
+  width: 100%;
+  background-color: #33658A;
+  text-align: center;
+}
+
+.comparison-cards {
+  background-color: #D6D1B1;
+  display: inline-block;
+  border: 4px solid #FE5F55;
+  margin: 1.5rem;
+  width: 15rem;
+  height: 19rem;
+  text-align: center;
+}
+
+.comparison-card {
+  background-color: #EDDEA4;
+  height: 12rem;
+  padding: 0.5rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.comparison-location {
+  background-color: #EDDEA4;
+  color: #2F4858;
+  font-size: 1rem;
+  height: 2.2rem;
+}
+
+.location-average {
+  background-color: #EDDEA4;
+  color: #0D6684;
+  font-size: 1.1rem;
+}
+
+.comparison-average {
+  background-color: #EDDEA4;
+  height: 2.5rem;
+  color: #FE5F55;
+  font-size: 2rem;
+  margin: 1rem 0;
+}
